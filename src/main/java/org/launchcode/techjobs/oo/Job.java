@@ -40,6 +40,21 @@ public class Job {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        String output = "";
+        if (this.name == null || this.name.isEmpty()) {
+            output += System.lineSeparator() + "Data not available";
+        } else {
+            output += System.lineSeparator() + this.name;
+        }
+        if (this.employer == null || this.employer.getValue().isEmpty()) {
+            output += System.lineSeparator() + "Data not available";
+        } else {
+            output += System.lineSeparator() + this.employer.getValue();
+        }
+        return output;
+    }
     /**** Getters and Setters ****/
     public String getName() {
         return name;
