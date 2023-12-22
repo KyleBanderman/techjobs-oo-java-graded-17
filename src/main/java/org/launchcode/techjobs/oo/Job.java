@@ -44,30 +44,31 @@ public class Job {
     public String toString() {
         String output = System.lineSeparator() + "ID: " + this.id;
         if (this.name == null || this.name.isEmpty()) {
-            output += System.lineSeparator() + "Name: Data not Available";
+            output += System.lineSeparator() + "Name: Data not available";
         } else {
             output += System.lineSeparator() + "Name: " + this.name;
         }
         if (this.employer == null || this.employer.getValue().isEmpty()) {
-            output += System.lineSeparator() + "Employer: Data not Available";
+            output += System.lineSeparator() + "Employer: Data not available";
         } else {
             output += System.lineSeparator() + "Employer: "  + this.employer.getValue();
         }
         if (this.location == null || this.location.getValue().isEmpty()) {
-            output += System.lineSeparator() + "Location: Data not Available";
+            output += System.lineSeparator() + "Location: Data not available";
         } else {
             output += System.lineSeparator() + "Location: " + this.location.getValue();
         }
         if (this.positionType == null || this.positionType.getValue().isEmpty()) {
-            output += System.lineSeparator() + "Position Type: Data not Available";
+            output += System.lineSeparator() + "Position Type: Data not available";
         } else {
             output += System.lineSeparator() + "Position Type: " + this.positionType.getValue();
         }
         if (this.coreCompetency == null || this.coreCompetency.getValue().isEmpty()) {
-            output += System.lineSeparator() + "Core Competency: Data not Available";
+            output += System.lineSeparator() + "Core Competency: Data not available";
         } else {
             output += System.lineSeparator() + "Core Competency: " + this.coreCompetency.getValue();
         }
+        output += System.lineSeparator();
         return output;
     }
     /**** Getters and Setters ****/

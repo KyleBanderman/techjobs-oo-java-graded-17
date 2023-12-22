@@ -1,52 +1,12 @@
 package org.launchcode.techjobs.oo;
 
-import javax.swing.text.Position;
-import java.util.Objects;
+public class PositionType extends JobField {
 
-public class PositionType {
-
-    private int id;
-    private static int nextId = 1;
-    private String value;
-
-    public PositionType() {
-        id = nextId;
-        nextId++;
+    public PositionType(String aValue) {
+        super(aValue);
     }
-
-    public PositionType(String value) {
-        this();
-        this.value = value;
-    }
-
     @Override
-    public String toString() { return value; }
-
-    // Getters and Setters:
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        PositionType that = (PositionType) o;
-        return id == that.id;
+    public String toString() {
+        return getValue();
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
 }
