@@ -45,20 +45,20 @@ public class JobTest {
         String testString = job1.toString();
         char firstChar = testString.charAt(0);
         char lastChar = testString.charAt(testString.length() - 1);
-        assertEquals(firstChar, System.lineSeparator());
-        assertEquals(lastChar, System.lineSeparator());
+        assertEquals(firstChar, '\n');
+        assertEquals(lastChar, '\n');
     }
 
     @Test
     public void testToStringContainsCorrectLabelsAndData () {
         Job job1 = new Job("Name", new Employer("Employer"), new Location("Location"), new PositionType("Position Type"), new CoreCompetency("Core Competency"));
-        assertEquals(job1.toString(), System.lineSeparator() + "ID: 4" + System.lineSeparator() + "Name: Name" + System.lineSeparator() + "Employer: Employer" + System.lineSeparator() + "Location: Location" + System.lineSeparator() + "Position Type: Position Type" + System.lineSeparator() + "Core Competency: Core Competency" + System.lineSeparator());
+        assertEquals(job1.toString(), '\n' + "ID: 4" + '\n' + "Name: Name" + '\n' + "Employer: Employer" + '\n' + "Location: Location" + '\n' + "Position Type: Position Type" + '\n' + "Core Competency: Core Competency" + '\n');
     }
 
     @Test
     public void testToStringHandlesEmptyField () {
         Job job1 = new Job ("Name", new Employer(""), new Location("Location"), new PositionType("Position Type"), new CoreCompetency(""));
-        assertEquals(job1.toString(), System.lineSeparator() + "ID: 3" + System.lineSeparator() + "Name: Name" + System.lineSeparator() + "Employer: Data not available" + System.lineSeparator() + "Location: Location" + System.lineSeparator() + "Position Type: Position Type" + System.lineSeparator() + "Core Competency: Data not available" + System.lineSeparator());
+        assertEquals(job1.toString(), '\n' + "ID: 3" + '\n' + "Name: Name" + '\n' + "Employer: Data not available" + '\n' + "Location: Location" + '\n' + "Position Type: Position Type" + '\n' + "Core Competency: Data not available" + '\n');
 
     }
 }

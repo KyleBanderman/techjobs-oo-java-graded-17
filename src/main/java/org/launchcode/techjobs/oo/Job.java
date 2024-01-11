@@ -42,33 +42,33 @@ public class Job {
 
     @Override
     public String toString() {
-        String output = System.lineSeparator() + "ID: " + this.id;
+        String output = '\n' + "ID: " + this.id;
         if (this.name == null || this.name.isEmpty()) {
-            output += System.lineSeparator() + "Name: Data not available";
+            output += '\n' + "Name: Data not available";
         } else {
-            output += System.lineSeparator() + "Name: " + this.name;
+            output += '\n' + "Name: " + this.name;
         }
         if (this.employer == null || this.employer.getValue().isEmpty()) {
-            output += System.lineSeparator() + "Employer: Data not available";
+            output += '\n' + "Employer: Data not available";
         } else {
-            output += System.lineSeparator() + "Employer: "  + this.employer.getValue();
+            output += '\n' + "Employer: "  + this.employer.getValue();
         }
         if (this.location == null || this.location.getValue().isEmpty()) {
-            output += System.lineSeparator() + "Location: Data not available";
+            output += '\n' + "Location: Data not available";
         } else {
-            output += System.lineSeparator() + "Location: " + this.location.getValue();
+            output += '\n' + "Location: " + this.location.getValue();
         }
         if (this.positionType == null || this.positionType.getValue().isEmpty()) {
-            output += System.lineSeparator() + "Position Type: Data not available";
+            output += '\n' + "Position Type: Data not available";
         } else {
-            output += System.lineSeparator() + "Position Type: " + this.positionType.getValue();
+            output += '\n' + "Position Type: " + this.positionType.getValue();
         }
         if (this.coreCompetency == null || this.coreCompetency.getValue().isEmpty()) {
-            output += System.lineSeparator() + "Core Competency: Data not available";
+            output += '\n' + "Core Competency: Data not available";
         } else {
-            output += System.lineSeparator() + "Core Competency: " + this.coreCompetency.getValue();
+            output += '\n' + "Core Competency: " + this.coreCompetency.getValue();
         }
-        output += System.lineSeparator();
+        output += '\n';
         return output;
     }
     /**** Getters and Setters ****/
